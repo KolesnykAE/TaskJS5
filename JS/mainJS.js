@@ -164,48 +164,55 @@
 // -- changeYear (newValue) - змінює рік випуску на значення newValue
 // -- addDriver (driver) - приймає об'єкт який "водій" з довільним набором полів, і доавляет його в поточний об'єкт car
 
-    let car = {
-        model: 'mazda CX-30',
-        producer: 'mazda',
-        year : 2019,
-        maxSpeed : 193,
-        volumeEngine : 1.8,
-        drive() {
-            console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
-        },
-        info() {
-            console.log(`model: ${this.model},
-            producer: ${this.producer},
-            year : ${this.year},
-            maxSpeed : ${this.maxSpeed},
-            volumeEngine : ${this.volumeEngine},
-            driver : ${this.driver.name} age ${this.driver.age},
-            `);
-        },
-        increaseMaxSpeed (newSpeed) {
-            this.maxSpeed = newSpeed;
-        },
-        changeYear(newValue) {
-            this.year = newValue;
-        },
-        addDriver (driver){
-            this.driver = driver;
-        },
-    }
-
-    let driver = {name: 'Vitaliy', age: 35, status: true}
-
-    car.drive();
+    // let car = {
+    //     model: 'mazda CX-30',
+    //     producer: 'mazda',
+    //     year : 2019,
+    //     maxSpeed : 193,
+    //     volumeEngine : 1.8,
+    //     drive() {
+    //         console.log(`їдемо зі швидкістю ${this.maxSpeed} на годину`);
+    //     },
+    //     info() {
+    //         if (this.driver) {
+    //             console.log(
+    //             `model: ${this.model},
+    //             producer: ${this.producer},
+    //             year : ${this.year},
+    //             maxSpeed : ${this.maxSpeed},
+    //             volumeEngine : ${this.volumeEngine},
+    //             driver : ${this.driver.name} age ${this.driver.age},
+    //             `);
+    //             } else {
+    //             console.log(
+    //             `model: ${this.model},
+    //             producer: ${this.producer},
+    //             year : ${this.year},
+    //             maxSpeed : ${this.maxSpeed},
+    //             volumeEngine : ${this.volumeEngine},
+    //             `);
+    //         }
+    //
+    //     },
+    //     increaseMaxSpeed (newSpeed) {
+    //         this.maxSpeed = newSpeed;
+    //     },
+    //     changeYear(newValue) {
+    //         this.year = newValue;
+    //     },
+    //     addDriver (driver){
+    //         this.driver = driver;
+    //     },
+    // }
+    //
+    // let driver = {name: 'Vitaliy', age: 35, status: true}
+    //
+    // car.drive();
     // car.info();
-    car.increaseMaxSpeed(30);
-    car.changeYear(2021);
-    car.addDriver(driver);
-    car.info();
-// Как правильно добавить водителя?
-//  Если я вношу его в інфо, то при первом car.info - все ломается(((
-// а если его не вносить, то отображаеться инфо до внесения изменений и инфо после, но без водителя(
-
-
+    // car.increaseMaxSpeed(30);
+    // car.changeYear(2021);
+    // car.addDriver(driver);
+    // car.info();
 
 // 4. -створити класс попелюшка з полями ім'я, вік, розмір ноги
 // --Створити 10 попелюшок , покласти їх в масив
@@ -257,37 +264,41 @@
 // --Сторити об'єкт типу "принц" за допомоги функції конструктора з полями ім'я, вік, туфелька яку він знайшов, та функцію "пошук попелюшки"
 // -- функція повинна приймати масив попелюшок, та шукає ту котра йому підходить
 
-    function Cinderella(name, age, footSize) {
-        this.name = name;
-        this.age = age;
-        this.footSize = footSize
-    }
+    // function Cinderella(name, age, footSize) {
+    //     this.name = name ||'No name';
+    //     this.age = age || 'No age';
+    //     this.footSize = footSize || 'No foot';
+    // }
+    //
+    // let arrayCinderelles = [];
+    // arrayCinderelles[0] = new Cinderella('Karina', 17, 38);
+    // arrayCinderelles[1] = new Cinderella('Milissa', 29, 39.5);
+    // arrayCinderelles[2] = new Cinderella('Amaliya', 25, 37.5);
+    // arrayCinderelles[3] = new Cinderella('Sofiya', 19, 38);
+    // arrayCinderelles[4] = new Cinderella('Mariya', 18, 34.5);
+    // arrayCinderelles[5] = new Cinderella('Valeriya', 21, 38);
+    // arrayCinderelles[6] = new Cinderella('Anabelle', 18, 37);
+    // arrayCinderelles[7] = new Cinderella('Sherelise', 22, 39);
+    // arrayCinderelles[8] = new Cinderella('Assol', 23, 38.5);
+    // arrayCinderelles[9] = new Cinderella('Edera', 16, 36.5);
+    //
+    // function Prince(name, age, shoe) {
+    //     this.name = name || 'No name';
+    //     this.age = age || 'No age';
+    //     this.shoe = shoe || 'No shoe';
+    //
+    //     this.findCinderella = function (array) {
+    //         let find = null;
+    //         find = array.find(item => item.footSize === this.shoe);
+    //         find
+    //             ? console.log('My cinderella name' + ' ' + find.name)
+    //             : console.log('I not find my cinderell');
+    //     }
+    // }
+    //
+    // let prince = new Prince('Peter', 19, 34.5);
+    //
+    // prince.findCinderella(arrayCinderelles);
+    // console.log(prince);
 
-    let arrayCinderelles = [];
-    arrayCinderelles[0] = new Cinderella('Karina', 17, 38);
-    arrayCinderelles[1] = new Cinderella('Milissa', 29, 39.5);
-    arrayCinderelles[2] = new Cinderella('Amaliya', 25, 37.5);
-    arrayCinderelles[3] = new Cinderella('Sofiya', 19, 38);
-    arrayCinderelles[4] = new Cinderella('Mariya', 18, 34.5);
-    arrayCinderelles[5] = new Cinderella('Valeriya', 21, 38);
-    arrayCinderelles[6] = new Cinderella('Anabelle', 18, 37);
-    arrayCinderelles[7] = new Cinderella('Sherelise', 22, 39);
-    arrayCinderelles[8] = new Cinderella('Assol', 23, 38.5);
-    arrayCinderelles[9] = new Cinderella('Edera', 16, 36.5);
 
-    function Prince(name, age, shoe) {
-        this.name = name;
-        this.age = age;
-        this.shoe = shoe;
-    }
-
-    let prince = new Prince('Peter', 19, 34.5)
-
-    function princeFind(array){
-        for (const item of array) {
-            if (item.footSize === prince.shoe){
-                return item.name
-            }
-        }
-    }
-      princeFind(arrayCinderelles)
